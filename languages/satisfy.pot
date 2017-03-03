@@ -1,0 +1,581 @@
+# Copyright (C) 2017 Satisfy
+# This file is distributed under the same license as the Satisfy package.
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Satisfy\n"
+"POT-Creation-Date: 2017-02-28 16:00+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Webbjocke <mail@webbjocke.com>\n"
+"Language-Team: Webbjocke <mail@webbjocke.com>\n"
+"Report-Msgid-Bugs-To: Webbjocke <mail@webbjocke.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 1.8.11\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: _e;__;_n;_n:1,2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:10
+msgid "Oops! That page can't be found"
+msgstr ""
+
+#: 404.php:18
+msgid "The page was not found (404)"
+msgstr ""
+
+#: 404.php:19
+msgid "Maybe a search?"
+msgstr ""
+
+#: 404.php:22
+msgid "Go back to homepage"
+msgstr ""
+
+#: comments.php:22
+msgid "comment on"
+msgid_plural "comments on"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:45
+msgid "Older Comments"
+msgstr ""
+
+#: comments.php:51
+msgid "Newer Comments"
+msgstr ""
+
+#: comments.php:61
+msgid "Comments are closed"
+msgstr ""
+
+#: comments.php:74
+msgid "You may use these HTML tags and attributes"
+msgstr ""
+
+#: functions.php:44
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:45
+msgid "Footer Menu"
+msgstr ""
+
+#: functions.php:116 inc/satisfy-customize.php:353
+msgid "Sidebar"
+msgstr ""
+
+#: functions.php:117
+msgid "Footer 1 (left)"
+msgstr ""
+
+#: functions.php:118
+msgid "Footer 2 (middle)"
+msgstr ""
+
+#: functions.php:119
+msgid "Footer 3 (right)"
+msgstr ""
+
+#: functions.php:120
+msgid "Home Page"
+msgstr ""
+
+#: functions.php:143
+msgid "Read more"
+msgstr ""
+
+#: functions.php:320
+msgid "Y"
+msgstr ""
+
+#: functions.php:338
+msgid "Search results for"
+msgstr ""
+
+#: functions.php:340
+msgid "Search"
+msgstr ""
+
+#: functions.php:349
+msgid "Welcome to Satisfy! Info about the theme can be found at your"
+msgstr ""
+
+#: functions.php:350
+msgid "theme info page"
+msgstr ""
+
+#: functions.php:360
+msgid "Theme"
+msgstr ""
+
+#: functions.php:366 inc/admin/satisfy-admin.php:23
+msgid "Satisfy Info"
+msgstr ""
+
+#: inc/admin/satisfy-admin.php:28 inc/admin/satisfy-admin.php:33
+msgid "General"
+msgstr ""
+
+#: inc/admin/satisfy-admin.php:29
+msgid "Translations"
+msgstr ""
+
+#: inc/admin/satisfy-admin.php:34
+#, php-format
+msgid "Your theme settings are at Appearance &gt; <a href=\"%s\">Customize</a>."
+msgstr ""
+
+#: inc/admin/satisfy-admin.php:36
+msgid "Widgets"
+msgstr ""
+
+#: inc/admin/satisfy-admin.php:37
+msgid "Satisfy adds two widgets that you can use"
+msgstr ""
+
+#: inc/admin/satisfy-admin.php:39
+msgid "Satisfy Latest Posts - Latest posts with thumbnail images (uses posts \"featured image\")"
+msgstr ""
+
+#: inc/admin/satisfy-admin.php:40
+msgid "Satisfy Image - Displays an image of your choice"
+msgstr ""
+
+#: inc/admin/satisfy-admin.php:43
+msgid "About the footer"
+msgstr ""
+
+#: inc/admin/satisfy-admin.php:45
+msgid "The theme adds three sections in the footer for widgets (Footer 1, Footer 2, and Footer 3). If you only add widgets in one section they will have 100% width in the footer, two sections will have 50% each and three sections 33%. Tip: If you only want to have a small widget in the middle add it to the Footer 2 (middle) widget and add an empty \"Text widget\" in Footer 1 (left) and one in Footer 3 (right)."
+msgstr ""
+
+#: inc/admin/satisfy-admin.php:48
+msgid "Like the theme?"
+msgstr ""
+
+#: inc/admin/satisfy-admin.php:49
+msgid "Show your support by rating the theme at wordpress.org!"
+msgstr ""
+
+#: inc/admin/satisfy-admin.php:53
+msgid "Satisfy is translation ready!"
+msgstr ""
+
+#: inc/admin/satisfy-admin.php:55
+msgid "On your site the theme displays some sentences like \"posted on\", \"updated\" and \"Oops! That page can't be found\" etc. These sentences can be translated into your own language if you want. (If they already aren't)"
+msgstr ""
+
+#: inc/admin/satisfy-admin.php:58
+msgid "Either you can help contributing to translating the theme at satifys theme page at wordpress.org so others also can use your translations. Or you can use a plugin like Loco Translate or some other to translate the sentences you want. Programs like Poedit also does the trick."
+msgstr ""
+
+#: inc/satisfy-blog-loop.php:86
+msgid "Pages"
+msgstr ""
+
+#: inc/satisfy-blog-loop.php:122
+msgid "No content found"
+msgstr ""
+
+#: inc/satisfy-customize.php:24
+msgid "Fonts"
+msgstr ""
+
+#: inc/satisfy-customize.php:25
+msgid "Satisfy themes font options."
+msgstr ""
+
+#: inc/satisfy-customize.php:29
+msgid "Layout"
+msgstr ""
+
+#: inc/satisfy-customize.php:30
+msgid "Satisfy themes layout options"
+msgstr ""
+
+#: inc/satisfy-customize.php:34
+msgid "Footer"
+msgstr ""
+
+#: inc/satisfy-customize.php:35
+msgid "Satisfy themes footer options"
+msgstr ""
+
+#: inc/satisfy-customize.php:202
+msgid "Text color"
+msgstr ""
+
+#: inc/satisfy-customize.php:207
+msgid "Headings color"
+msgstr ""
+
+#: inc/satisfy-customize.php:212
+msgid "Links color"
+msgstr ""
+
+#: inc/satisfy-customize.php:217
+msgid "Links hover color"
+msgstr ""
+
+#: inc/satisfy-customize.php:222
+msgid "Borders color"
+msgstr ""
+
+#: inc/satisfy-customize.php:227
+msgid "Header menu text color"
+msgstr ""
+
+#: inc/satisfy-customize.php:232
+msgid "Header menu background color"
+msgstr ""
+
+#: inc/satisfy-customize.php:237
+msgid "Footer text color"
+msgstr ""
+
+#: inc/satisfy-customize.php:242
+msgid "Footer background color"
+msgstr ""
+
+#: inc/satisfy-customize.php:247
+msgid "Footer border color"
+msgstr ""
+
+#: inc/satisfy-customize.php:254
+msgid "Text Font size"
+msgstr ""
+
+#: inc/satisfy-customize.php:255 inc/satisfy-customize.php:270
+#: inc/satisfy-customize.php:285
+msgid "default"
+msgstr ""
+
+#: inc/satisfy-customize.php:262
+msgid "Text Font family"
+msgstr ""
+
+#: inc/satisfy-customize.php:269
+msgid "Headers font size"
+msgstr ""
+
+#: inc/satisfy-customize.php:277
+msgid "Headers Font family"
+msgstr ""
+
+#: inc/satisfy-customize.php:284
+msgid "Big banner font size"
+msgstr ""
+
+#: inc/satisfy-customize.php:294
+msgid "Display tagline"
+msgstr ""
+
+#: inc/satisfy-customize.php:295
+msgid "Also displays your tagline in header menu if \"Display Site Title and Tagline\" option is checked"
+msgstr ""
+
+#: inc/satisfy-customize.php:303
+msgid "Home page header title"
+msgstr ""
+
+#: inc/satisfy-customize.php:309
+msgid "Home page header text"
+msgstr ""
+
+#: inc/satisfy-customize.php:310 inc/satisfy-customize.php:488
+msgid "Allowed tags"
+msgstr ""
+
+#: inc/satisfy-customize.php:316
+msgid "Show header scroll down arrow"
+msgstr ""
+
+#: inc/satisfy-customize.php:322
+msgid "Text shadow in header"
+msgstr ""
+
+#: inc/satisfy-customize.php:328
+msgid "Banner image height"
+msgstr ""
+
+#: inc/satisfy-customize.php:329
+msgid "Banner is always 100% width, here you change its height"
+msgstr ""
+
+#: inc/satisfy-customize.php:340 inc/satisfy-customize.php:470
+msgid "Black background overlay"
+msgstr ""
+
+#: inc/satisfy-customize.php:358
+msgid "Right sidebar"
+msgstr ""
+
+#: inc/satisfy-customize.php:359
+msgid "Left sidebar"
+msgstr ""
+
+#: inc/satisfy-customize.php:360
+msgid "No sidebar"
+msgstr ""
+
+#: inc/satisfy-customize.php:361
+msgid "No sidebar and small layout"
+msgstr ""
+
+#: inc/satisfy-customize.php:365
+msgid "Featured images in posts and pages"
+msgstr ""
+
+#: inc/satisfy-customize.php:366
+msgid "How your posts and pages \"featured images\" should be displayed on those pages"
+msgstr ""
+
+#: inc/satisfy-customize.php:371
+msgid "In content"
+msgstr ""
+
+#: inc/satisfy-customize.php:372
+msgid "As header images"
+msgstr ""
+
+#: inc/satisfy-customize.php:373
+msgid "Don't show in posts or pages"
+msgstr ""
+
+#: inc/satisfy-customize.php:377
+msgid "Featured images in blog loops"
+msgstr ""
+
+#: inc/satisfy-customize.php:378
+msgid "How your posts \"featured images\" should be displayed in blog loops"
+msgstr ""
+
+#: inc/satisfy-customize.php:383
+msgid "Medium size"
+msgstr ""
+
+#: inc/satisfy-customize.php:384
+msgid "Full size"
+msgstr ""
+
+#: inc/satisfy-customize.php:385
+msgid "Don't show in blog loops"
+msgstr ""
+
+#: inc/satisfy-customize.php:389
+msgid "Show search icon in header menu"
+msgstr ""
+
+#: inc/satisfy-customize.php:395
+msgid "Sticky header menu"
+msgstr ""
+
+#: inc/satisfy-customize.php:401
+msgid "Sticky scroll to top button"
+msgstr ""
+
+#: inc/satisfy-customize.php:407
+msgid "Show \"Allowed html tags\" text at posts and pages comment form"
+msgstr ""
+
+#: inc/satisfy-customize.php:414
+msgid "Show posts full content in blog loops"
+msgstr ""
+
+#: inc/satisfy-customize.php:420
+msgid "Show \"posted on\" info"
+msgstr ""
+
+#: inc/satisfy-customize.php:426
+msgid "Show \"posted on\" info for pages"
+msgstr ""
+
+#: inc/satisfy-customize.php:432
+msgid "Show fontawesome icons for post info, categories, tags and read more buttons"
+msgstr ""
+
+#: inc/satisfy-customize.php:438
+msgid "Show posts updated date"
+msgstr ""
+
+#: inc/satisfy-customize.php:444
+msgid "Show read more buttons"
+msgstr ""
+
+#: inc/satisfy-customize.php:450
+msgid "Show profile picture on author pages"
+msgstr ""
+
+#: inc/satisfy-customize.php:451
+msgid "From \"Profile picture\" on your Profile page"
+msgstr ""
+
+#: inc/satisfy-customize.php:457
+msgid "Show previous and next post links in posts and pages"
+msgstr ""
+
+#: inc/satisfy-customize.php:465
+msgid "Footer background image"
+msgstr ""
+
+#: inc/satisfy-customize.php:481
+msgid "Text shadow in footer"
+msgstr ""
+
+#: inc/satisfy-customize.php:487
+msgid "Footer text"
+msgstr ""
+
+#: inc/satisfy-customize.php:488
+msgid "Text to be displayed in the footer. If you have active footer widgets they will be shown instead"
+msgstr ""
+
+#: inc/satisfy-customize.php:789
+msgid "Open Sans"
+msgstr ""
+
+#: inc/satisfy-customize.php:790
+msgid "Roboto Slab"
+msgstr ""
+
+#: inc/satisfy-customize.php:791
+msgid "Georgia"
+msgstr ""
+
+#: inc/satisfy-customize.php:792
+msgid "Palatino Linotype"
+msgstr ""
+
+#: inc/satisfy-customize.php:793
+msgid "Times New Roman"
+msgstr ""
+
+#: inc/satisfy-customize.php:794
+msgid "Arial"
+msgstr ""
+
+#: inc/satisfy-customize.php:795
+msgid "Arial Black"
+msgstr ""
+
+#: inc/satisfy-customize.php:796
+msgid "Comic Sans"
+msgstr ""
+
+#: inc/satisfy-customize.php:797
+msgid "Impact"
+msgstr ""
+
+#: inc/satisfy-customize.php:798
+msgid "Tahoma"
+msgstr ""
+
+#: inc/satisfy-customize.php:799
+msgid "Helvetica Neue"
+msgstr ""
+
+#: inc/satisfy-customize.php:800
+msgid "Lucida Sans Unicode"
+msgstr ""
+
+#: inc/satisfy-customize.php:801
+msgid "Trebuchet"
+msgstr ""
+
+#: inc/satisfy-customize.php:802
+msgid "Verdana"
+msgstr ""
+
+#: inc/satisfy-customize.php:803
+msgid "Century Gothic"
+msgstr ""
+
+#: inc/satisfy-customize.php:804
+msgid "Courier New"
+msgstr ""
+
+#: inc/satisfy-customize.php:805
+msgid "Lucida Console"
+msgstr ""
+
+#: inc/satisfy-customize.php:806
+msgid "Cursive"
+msgstr ""
+
+#: inc/satisfy-customize.php:807
+msgid "Sans Serif"
+msgstr ""
+
+#: inc/satisfy-customize.php:808
+msgid "Serif"
+msgstr ""
+
+#: inc/satisfy-post-info.php:20
+msgid "Posted on"
+msgstr ""
+
+#: inc/satisfy-post-info.php:28
+msgid "by"
+msgstr ""
+
+#: inc/satisfy-post-info.php:42
+msgid "Comment"
+msgid_plural "Comments"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/satisfy-post-info.php:48
+msgid "Updated"
+msgstr ""
+
+#: inc/satisfy-utils.php:33
+msgid "page"
+msgstr ""
+
+#: inc/widgets/satisfy-image-widget.php:12
+msgid "Satisfy Image Widget"
+msgstr ""
+
+#: inc/widgets/satisfy-image-widget.php:14
+msgid "Displays an image from url"
+msgstr ""
+
+#: inc/widgets/satisfy-image-widget.php:56
+msgid "Image Url"
+msgstr ""
+
+#: inc/widgets/satisfy-image-widget.php:60
+#: inc/widgets/satisfy-latest-widget.php:86
+msgid "Title"
+msgstr ""
+
+#: inc/widgets/satisfy-image-widget.php:60
+#: inc/widgets/satisfy-image-widget.php:64
+#: inc/widgets/satisfy-image-widget.php:68
+msgid "optional"
+msgstr ""
+
+#: inc/widgets/satisfy-image-widget.php:64
+msgid "Alt text"
+msgstr ""
+
+#: inc/widgets/satisfy-image-widget.php:68
+msgid "Link to"
+msgstr ""
+
+#: inc/widgets/satisfy-latest-widget.php:12
+msgid "Satisfy Latest posts Widget"
+msgstr ""
+
+#: inc/widgets/satisfy-latest-widget.php:14
+msgid "Latest posts with their featured images as thumbnail images"
+msgstr ""
+
+#: inc/widgets/satisfy-latest-widget.php:90
+msgid "Amount of posts"
+msgstr ""
