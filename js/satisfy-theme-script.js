@@ -80,10 +80,8 @@ jQuery(function ( $ ) {
     });
 
     // Hero arrow
-    $( '#site-hero .fa' ).on( 'click', function () {
-        anim_scroll(
-            $( '.cover-img' ).height() - ('absolute' === header.css( 'position' ) ? 0 : header.height())
-        );
+    $( '#site-hero .fa-chevron-down' ).on( 'click', function () {
+        anim_scroll( $( '.cover-img' ).height() - ('absolute' === header.css( 'position' ) ? 0 : header.height()) );
     });
 
     // Scroll to top button
