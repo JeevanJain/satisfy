@@ -5,8 +5,8 @@ Theme URI: https://www.webbjocke.com/satisfy/
 Contributors: Webbjocke
 Author URI: https://www.webbjocke.com/
 Requires at least: WordPress 4.1
-Tested up to: 4.7.2
-Version: 1.0.5
+Tested up to: 4.7.3
+Version: 1.0.6
 License: GNU General Public License v3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Tags: one-column, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-logo, custom-menu, featured-image-header, featured-images, footer-widgets, microformats, theme-options, threaded-comments, translation-ready, blog
@@ -60,6 +60,12 @@ Satisfy bundles the following third-party resources:
 * Google fonts in theme (Roboto Slab & Open Sans) licensed under Apache License, version 2.0 (https://fonts.google.com/attribution)
 
 == Changelog ==
+
+= 1.0.6 (Mar 14, 2017) =
+* Css fixes
+* Custom header size option changed
+* Removed customizer js
+* New section in admin
 
 = 1.0.5 (Feb 28, 2017) =
 * Forgot text domain for some translations

@@ -325,7 +325,7 @@ class Satisfy_customize {
         ) ) );
         $c->add_control( new WP_Customize_Control( $c, 'satisfy_banner_size', array(
             'label'       => __( 'Header height on home page', 'satisfy' ),
-            'description' => __( '(Header is always 100% width, here you change its height)', 'satisfy' ),
+            'description' => __( 'Header is always 100% width, here you change its height. Vh units are relative to your screen, 100vh means full screen height', 'satisfy' ),
             'section'     => 'header_image',
             'settings'    => 'satisfy_banner[size]',
             'type'        => 'select',
@@ -333,7 +333,7 @@ class Satisfy_customize {
         ) ) );
         $c->add_control( new WP_Customize_Control( $c, 'satisfy_banner_page_size', array(
             'label'       => __( 'Header height on posts and pages', 'satisfy' ),
-            'description' => __( '(If you have set the option to display featured images as header images in layout section)', 'satisfy' ),
+            'description' => __( 'If you have set the option to display featured images as header images in layout section', 'satisfy' ),
             'section'     => 'header_image',
             'settings'    => 'satisfy_banner[page_size]',
             'type'        => 'select',
