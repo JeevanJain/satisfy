@@ -23,7 +23,6 @@ add_action( 'wp_enqueue_scripts', 'satisfy_load_early_resources', 1 );
 add_action( 'wp_enqueue_scripts', 'satisfy_load_theme_resources' );
 add_action( 'customize_register', array( 'Satisfy_customize', 'init' ) );
 add_action( 'wp_enqueue_scripts', array( 'Satisfy_customize', 'display_styles' ) );
-add_action( 'customize_preview_init', array( 'Satisfy_customize', 'live_script' ) );
 add_action( 'admin_menu', 'satisfy_admin_init' );
 
 add_action( 'satisfy_print_post_info', array( 'Satisfy_post_info', 'print_post_info' ) );
@@ -195,19 +194,22 @@ if ( ! function_exists( 'satisfy_print_logo' ) ) {
 // Prepares header banner and prints css classes for it
 if ( ! function_exists( 'satisfy_prepare_banner' ) ) {
     function satisfy_prepare_banner () {
-        $url = false;
         $cl_name = '';
-        $h1 = '';
-        $slogan = '';
+        $banner = array(
+            'url' => false,
+            'h1' => '',
+            'slogan' => '',
+            'is_page' => false
+        );
 
         if ( is_404() ) {
             return;
         }
 
         if ( is_front_page() ) {
-            $url = get_custom_header()->url;
-            $slogan = get_theme_mod( 'satisfy_new_slogan' );
-            $h1 = get_theme_mod( 'satisfy_tagline' );
+            $banner['url'] = get_custom_header()->url;
+            $banner['slogan'] = get_theme_mod( 'satisfy_new_slogan' );
+            $banner['h1'] = get_theme_mod( 'satisfy_tagline' );
 
         } elseif ( ( satisfy_is_post() || is_home() ) && 'full' === get_theme_mod( 'posts_featured_images' ) ) {
             $id = is_home() ? get_option( 'page_for_posts' ) : get_the_ID();
@@ -215,19 +217,16 @@ if ( ! function_exists( 'satisfy_prepare_banner' ) ) {
             if ( has_post_thumbnail( $id ) ) {
                 $img_arr = wp_get_attachment_image_src( get_post_thumbnail_id( $id ), 'full' );
                 if ( $img_arr ) {
-                    $url = $img_arr[0];
-                    $h1 = get_the_title( $id );
+                    $banner['url'] = $img_arr[0];
+                    $banner['h1'] = get_the_title( $id );
+                    $banner['is_page'] = true;
                     $cl_name = 'hentry';
                 }
             }
         }
 
-        if ( $url ) {
-            satisfy_temp_option( 'has_banner', array(
-                'url'    => $url,
-                'h1'     => $h1,
-                'slogan' => $slogan
-            ) );
+        if ( $banner['url'] ) {
+            satisfy_temp_option( 'has_banner', $banner );
             $cl_name .= ' satisfy-banner';
         }
 
@@ -246,18 +245,20 @@ if ( ! function_exists( 'satisfy_print_banner' ) ) {
 
         $styles = array_merge(
             array(
-                'arrow'  => true,
-                'size'   => 60,
-                'shadow' => true
+                'arrow'     => true,
+                'size'      => 60,
+                'page_size' => 60,
+                'shadow'    => true
             ),
             get_theme_mod( 'satisfy_banner', array() )
-        ); ?>
+        );
+        $size = $banner['is_page'] ? $styles['page_size'] : $styles['size']; ?>
 
-        <div class="cover-img" style="min-height:<?php echo absint( $styles['size'] ); ?>vh;background-image:url(<?php echo esc_url( $banner['url'] ); ?>);<?php
+        <div class="cover-img" style="min-height:<?php echo absint( $size ); ?>vh;background-image:url(<?php echo esc_url( $banner['url'] ); ?>);<?php
             if ( $styles['shadow'] ) {
                 echo 'text-shadow:1px 1px 3px rgba(0,0,0,0.9);';
             } ?>">
-            <div class="vertical-table" style="height:<?php echo absint( $styles['size'] ); ?>vh">
+            <div class="vertical-table" style="height:<?php echo absint( $size ); ?>vh">
                 <div class="vertical-center">
                     <div class="container-fluid">
                         <div class="content-wrapper">

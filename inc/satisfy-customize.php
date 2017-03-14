@@ -13,11 +13,6 @@ class Satisfy_customize {
         self::add_controls( $wp_customize );
     }
 
-    // Enqueues script
-    public static function live_script () {
-        wp_enqueue_script( 'satisfy-theme-customize', SATISFY_THEME_URL . 'js/satisfy-theme-customize.js', array( 'jquery', 'customize-preview' ), SATISFY_THEME_VERSION, true );
-    }
-
     // Sections
     public static function add_sections ( $c ) {
         $c->add_section( 'satisfy_fonts' , array(
@@ -78,6 +73,10 @@ class Satisfy_customize {
             'sanitize_callback' => 'sanitize_hex_color'
         ) );
         $c->add_setting( 'satisfy_banner[size]', array(
+            'default'           => 60,
+            'sanitize_callback' => array( __CLASS__, 'float_val' )
+        ) );
+        $c->add_setting( 'satisfy_banner[page_size]', array(
             'default'           => 60,
             'sanitize_callback' => array( __CLASS__, 'float_val' )
         ) );
@@ -325,16 +324,20 @@ class Satisfy_customize {
             'type'     => 'checkbox'
         ) ) );
         $c->add_control( new WP_Customize_Control( $c, 'satisfy_banner_size', array(
-            'label'       => __( 'Banner image height', 'satisfy' ),
-            'description' => __( 'Banner is always 100% width, here you change its height', 'satisfy' ),
+            'label'       => __( 'Header height on home page', 'satisfy' ),
+            'description' => __( '(Header is always 100% width, here you change its height)', 'satisfy' ),
             'section'     => 'header_image',
             'settings'    => 'satisfy_banner[size]',
-            'type'        => 'range',
-            'input_attrs' => array(
-                'min'  => 25,
-                'max'  => 100,
-                'step' => 1
-            )
+            'type'        => 'select',
+            'choices'     => self::get_units( 25, 100, 1, 'vh' )
+        ) ) );
+        $c->add_control( new WP_Customize_Control( $c, 'satisfy_banner_page_size', array(
+            'label'       => __( 'Header height on posts and pages', 'satisfy' ),
+            'description' => __( '(If you have set the option to display featured images as header images in layout section)', 'satisfy' ),
+            'section'     => 'header_image',
+            'settings'    => 'satisfy_banner[page_size]',
+            'type'        => 'select',
+            'choices'     => self::get_units( 25, 100, 1, 'vh' )
         ) ) );
         $c->add_control( new WP_Customize_Control( $c, 'satisfy_banner_overlay', array(
             'label'       => __( 'Black background overlay', 'satisfy' ),

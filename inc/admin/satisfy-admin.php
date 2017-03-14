@@ -27,6 +27,7 @@ class Satisfy_admin {
                     <ul class="tabs-ul">
                         <li><a href="#tabs-1"><?php _e( 'General', 'satisfy' ); ?></a></li>
                         <li><a href="#tabs-2"><?php _e( 'Translations', 'satisfy' ); ?></a></li>
+                        <li><a href="#tabs-3"><?php _e( 'Premium', 'satisfy' ); ?></a></li>
                     </ul>
 
                     <div id="tabs-1" class="tab-item">
@@ -35,6 +36,7 @@ class Satisfy_admin {
 
                         <h2 class="top-30"><?php _e( 'Widgets', 'satisfy' ); ?></h2>
                         <p><?php _e( 'Satisfy adds two widgets that you can use', 'satisfy' ); ?></p>
+
                         <ul class="default-ul">
                             <li><?php _e( 'Satisfy Latest Posts - Latest posts with thumbnail images (uses posts "featured image")', 'satisfy' ); ?></li>
                             <li><?php _e( 'Satisfy Image - Displays an image of your choice', 'satisfy' ); ?></li>
@@ -57,6 +59,21 @@ class Satisfy_admin {
                         <p>
                             <?php _e( 'Either you can help contributing to translating the theme at satifys theme page at wordpress.org so others also can use your translations. Or you can use a plugin like Loco Translate or some other to translate the sentences you want. Programs like Poedit also does the trick.', 'satisfy' ); ?>
                         </p>
+                    </div>
+
+                    <div id="tabs-3" class="tab-item">
+                        <h2><?php _e( 'Satisfy Premium', 'satisfy' ); ?></h2>
+                        <p><?php _e( 'There\'s a premium version of Satisfy out there which includes:', 'satisfy' ); ?></p>
+
+                        <ul class="default-ul">
+                            <li><?php _e( 'Home page header slider', 'satisfy' ); ?></li>
+                            <li><?php _e( 'Home page video header', 'satisfy' ); ?></li>
+                            <li><?php _e( 'Customizable headers on Posts and Pages', 'satisfy' ); ?></li>
+                            <li><?php _e( 'Google fonts', 'satisfy' ); ?></li>
+                            <li><?php _e( 'And much more!', 'satisfy' ); ?></li>
+                        </ul>
+
+                        <p><?php printf( __( 'Available at: <a href="%s" target="_blank">webbjocke.com/satisfy</a>', 'satisfy' ), esc_url( 'https://www.webbjocke.com/satisfy/' ) ); ?></p>
                     </div>
 
                 </div>
