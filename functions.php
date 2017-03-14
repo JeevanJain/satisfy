@@ -176,11 +176,13 @@ if ( ! function_exists( 'satisfy_print_logo' ) ) {
         <?php
         }
 
-        if ( display_header_text() ) { ?>
+        if ( display_header_text() ) {
+            $show_slogan = get_theme_mod( 'satisfy_show_menu_slogan' ); ?>
+
             <a id="site-title-wrap" href="<?php echo esc_url( home_url( '/' ) ); ?>">
-                <div class="vertical-center">
+                <div class="vertical-center<?php echo $show_slogan ? ' site-title-slogan' : ''; ?>">
                     <span class="site-title"><?php bloginfo( 'name' ); ?></span>
-                    <?php if ( get_theme_mod( 'satisfy_show_menu_slogan' ) ) { ?>
+                    <?php if ( $show_slogan ) { ?>
                         <span class="site-slogan"><?php bloginfo( 'description' ); ?></span>
                     <?php } ?>
                 </div>

@@ -409,6 +409,8 @@ body.home .hide-h1-slogan .custom-content {
 }
 #site-header #site-logo .site-title {
     display: block;
+}
+#site-header #site-logo .site-title-slogan .site-title {
     margin-top: -2px;
 }
 #site-header #site-logo .site-slogan {
@@ -609,6 +611,10 @@ body.home .hide-h1-slogan .custom-content {
     font-size: 26px;
     line-height: 1;
     z-index: 16;
+}
+#mobile-menu-btn .fa-times{
+    padding-left: 1px;
+    padding-right: 1px;
 }
 @media screen and (min-width: 992px) {
     #mobile-menu-btn {
