@@ -73,7 +73,7 @@ class Satisfy_admin {
                             <li><?php _e( 'And much more!', 'satisfy' ); ?></li>
                         </ul>
 
-                        <p><?php printf( __( 'Available at: <a href="%s" target="_blank">webbjocke.com/satisfy</a>', 'satisfy' ), esc_url( 'https://www.webbjocke.com/satisfy/' ) ); ?></p>
+                        <p><?php printf( __( 'Available at: <a href="%s" target="_blank">webbjocke.com/downloads/satisfy-premium</a>', 'satisfy' ), esc_url( 'https://www.webbjocke.com/downloads/satisfy-premium/' ) ); ?></p>
                     </div>
 
                 </div>
