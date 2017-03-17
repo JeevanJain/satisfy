@@ -165,6 +165,9 @@ class Satisfy_customize {
         $c->add_setting( 'show_author_pic', array(
             'sanitize_callback' => array( __CLASS__, 'bool_val' )
         ) );
+        $c->add_setting( 'satisfy[sidebar_border]', array(
+            'sanitize_callback' => array( __CLASS__, 'bool_val' )
+        ) );
         $c->add_setting( 'satisfy[fontawesome]', array(
             'default' => true,
             'sanitize_callback' => array( __CLASS__, 'bool_val' )
@@ -431,6 +434,12 @@ class Satisfy_customize {
             'settings' => 'post_info_pages',
             'type'     => 'checkbox'
         ) ) );
+        $c->add_control( new WP_Customize_Control( $c, 'satisfy_sidebar_border', array(
+            'label'    => __( 'Sidebar border', 'satisfy' ),
+            'section'  => 'satisfy_layout',
+            'settings' => 'satisfy[sidebar_border]',
+            'type'     => 'checkbox'
+        ) ) );
         $c->add_control( new WP_Customize_Control( $c, 'satisfy_fontawesome', array(
             'label'    => __( 'Show fontawesome icons for post info, categories, tags and read more buttons', 'satisfy' ),
             'section'  => 'satisfy_layout',
@@ -518,6 +527,7 @@ class Satisfy_customize {
                 'footer_border'        => '#e8e8e8',
                 'footer_shadow'        => false,
                 'show_nextlinks'       => true,
+                'sidebar_border'       => false,
                 'fontawesome'          => true,
                 'stickymenu'           => true,
                 'banner_color'         => '#' . get_header_textcolor(),
@@ -752,6 +762,17 @@ class Satisfy_customize {
                     margin-right: -15px;
                 }
             }';
+        }
+
+        if ( $escaped_styles['sidebar_border'] ) {
+            $css .= "@media screen and (min-width: 992px){
+                #primary-sidebar .sfy-pad-left{
+                    border-left: 1px solid {$escaped_styles['border_color']};
+                }
+                #primary-sidebar .sfy-pad-right{
+                    border-right: 1px solid {$escaped_styles['border_color']};
+                }
+            }";
         }
 
         if ( $escaped_styles['body_font_size'] < 16 ) {

@@ -61,6 +61,9 @@ Satisfy bundles the following third-party resources:
 
 == Changelog ==
 
+= Next update =
+* Optional sidebar border
+
 = 1.0.6 (Mar 14, 2017) =
 * Css fixes
 * Custom header size option changed
