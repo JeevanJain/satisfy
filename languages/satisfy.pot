@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Satisfy\n"
-"POT-Creation-Date: 2017-03-14 08:56+0100\n"
+"POT-Creation-Date: 2017-03-26 11:22+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Webbjocke <mail@webbjocke.com>\n"
 "Language-Team: Webbjocke <mail@webbjocke.com>\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Poedit 1.8.11\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: _e;__;_n;_n:1,2\n"
+"X-Poedit-KeywordsList: _e;__;esc_attr_e;_n;_n:1,2\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SearchPath-0: .\n"
 
@@ -65,7 +65,7 @@ msgstr ""
 msgid "Footer Menu"
 msgstr ""
 
-#: functions.php:115 inc/satisfy-customize.php:356
+#: functions.php:115 inc/satisfy-customize.php:359
 msgid "Sidebar"
 msgstr ""
 
@@ -97,7 +97,7 @@ msgstr ""
 msgid "Search results for"
 msgstr ""
 
-#: functions.php:343
+#: functions.php:343 searchform.php:11
 msgid "Search"
 msgstr ""
 
@@ -208,7 +208,7 @@ msgstr ""
 
 #: inc/admin/satisfy-admin.php:76
 #, php-format
-msgid "Available at: <a href=\"%s\" target=\"_blank\">webbjocke.com/satisfy</a>"
+msgid "Available at: <a href=\"%s\" target=\"_blank\">webbjocke.com/downloads/satisfy-premium</a>"
 msgstr ""
 
 #: inc/satisfy-blog-loop.php:86
@@ -243,320 +243,324 @@ msgstr ""
 msgid "Satisfy themes footer options"
 msgstr ""
 
-#: inc/satisfy-customize.php:201
+#: inc/satisfy-customize.php:204
 msgid "Text color"
 msgstr ""
 
-#: inc/satisfy-customize.php:206
+#: inc/satisfy-customize.php:209
 msgid "Headings color"
 msgstr ""
 
-#: inc/satisfy-customize.php:211
+#: inc/satisfy-customize.php:214
 msgid "Links color"
 msgstr ""
 
-#: inc/satisfy-customize.php:216
+#: inc/satisfy-customize.php:219
 msgid "Links hover color"
 msgstr ""
 
-#: inc/satisfy-customize.php:221
+#: inc/satisfy-customize.php:224
 msgid "Borders color"
 msgstr ""
 
-#: inc/satisfy-customize.php:226
+#: inc/satisfy-customize.php:229
 msgid "Header menu text color"
 msgstr ""
 
-#: inc/satisfy-customize.php:231
+#: inc/satisfy-customize.php:234
 msgid "Header menu background color"
 msgstr ""
 
-#: inc/satisfy-customize.php:236
+#: inc/satisfy-customize.php:239
 msgid "Footer text color"
 msgstr ""
 
-#: inc/satisfy-customize.php:241
+#: inc/satisfy-customize.php:244
 msgid "Footer background color"
 msgstr ""
 
-#: inc/satisfy-customize.php:246
+#: inc/satisfy-customize.php:249
 msgid "Footer border color"
 msgstr ""
 
-#: inc/satisfy-customize.php:253
+#: inc/satisfy-customize.php:256
 msgid "Text Font size"
 msgstr ""
 
-#: inc/satisfy-customize.php:254 inc/satisfy-customize.php:269
-#: inc/satisfy-customize.php:284
+#: inc/satisfy-customize.php:257 inc/satisfy-customize.php:272
+#: inc/satisfy-customize.php:287
 msgid "default"
 msgstr ""
 
-#: inc/satisfy-customize.php:261
+#: inc/satisfy-customize.php:264
 msgid "Text Font family"
 msgstr ""
 
-#: inc/satisfy-customize.php:268
+#: inc/satisfy-customize.php:271
 msgid "Headers font size"
 msgstr ""
 
-#: inc/satisfy-customize.php:276
+#: inc/satisfy-customize.php:279
 msgid "Headers Font family"
 msgstr ""
 
-#: inc/satisfy-customize.php:283
+#: inc/satisfy-customize.php:286
 msgid "Big banner font size"
 msgstr ""
 
-#: inc/satisfy-customize.php:293
+#: inc/satisfy-customize.php:296
 msgid "Display tagline"
 msgstr ""
 
-#: inc/satisfy-customize.php:294
+#: inc/satisfy-customize.php:297
 msgid "Also displays your tagline in header menu if \"Display Site Title and Tagline\" option is checked"
 msgstr ""
 
-#: inc/satisfy-customize.php:302
+#: inc/satisfy-customize.php:305
 msgid "Home page header title"
 msgstr ""
 
-#: inc/satisfy-customize.php:308
+#: inc/satisfy-customize.php:311
 msgid "Home page header text"
 msgstr ""
 
-#: inc/satisfy-customize.php:309 inc/satisfy-customize.php:491
+#: inc/satisfy-customize.php:312 inc/satisfy-customize.php:500
 msgid "Allowed tags"
 msgstr ""
 
-#: inc/satisfy-customize.php:315
+#: inc/satisfy-customize.php:318
 msgid "Show header scroll down arrow"
 msgstr ""
 
-#: inc/satisfy-customize.php:321
+#: inc/satisfy-customize.php:324
 msgid "Text shadow in header"
 msgstr ""
 
-#: inc/satisfy-customize.php:327
+#: inc/satisfy-customize.php:330
 msgid "Header height on home page"
 msgstr ""
 
-#: inc/satisfy-customize.php:328
+#: inc/satisfy-customize.php:331
 msgid "Header is always 100% width, here you change its height. Vh units are relative to your screen, 100vh means full screen height"
 msgstr ""
 
-#: inc/satisfy-customize.php:335
+#: inc/satisfy-customize.php:338
 msgid "Header height on posts and pages"
 msgstr ""
 
-#: inc/satisfy-customize.php:336
+#: inc/satisfy-customize.php:339
 msgid "If you have set the option to display featured images as header images in layout section"
 msgstr ""
 
-#: inc/satisfy-customize.php:343 inc/satisfy-customize.php:473
+#: inc/satisfy-customize.php:346 inc/satisfy-customize.php:482
 msgid "Black background overlay"
 msgstr ""
 
-#: inc/satisfy-customize.php:361
+#: inc/satisfy-customize.php:364
 msgid "Right sidebar"
 msgstr ""
 
-#: inc/satisfy-customize.php:362
+#: inc/satisfy-customize.php:365
 msgid "Left sidebar"
 msgstr ""
 
-#: inc/satisfy-customize.php:363
+#: inc/satisfy-customize.php:366
 msgid "No sidebar"
 msgstr ""
 
-#: inc/satisfy-customize.php:364
+#: inc/satisfy-customize.php:367
 msgid "No sidebar and small layout"
 msgstr ""
 
-#: inc/satisfy-customize.php:368
+#: inc/satisfy-customize.php:371
 msgid "Featured images in posts and pages"
 msgstr ""
 
-#: inc/satisfy-customize.php:369
+#: inc/satisfy-customize.php:372
 msgid "How your posts and pages \"featured images\" should be displayed on those pages"
 msgstr ""
 
-#: inc/satisfy-customize.php:374
+#: inc/satisfy-customize.php:377
 msgid "In content"
 msgstr ""
 
-#: inc/satisfy-customize.php:375
+#: inc/satisfy-customize.php:378
 msgid "As header images"
 msgstr ""
 
-#: inc/satisfy-customize.php:376
+#: inc/satisfy-customize.php:379
 msgid "Don't show in posts or pages"
 msgstr ""
 
-#: inc/satisfy-customize.php:380
+#: inc/satisfy-customize.php:383
 msgid "Featured images in blog loops"
 msgstr ""
 
-#: inc/satisfy-customize.php:381
+#: inc/satisfy-customize.php:384
 msgid "How your posts \"featured images\" should be displayed in blog loops"
 msgstr ""
 
-#: inc/satisfy-customize.php:386
+#: inc/satisfy-customize.php:389
 msgid "Medium size"
 msgstr ""
 
-#: inc/satisfy-customize.php:387
+#: inc/satisfy-customize.php:390
 msgid "Full size"
 msgstr ""
 
-#: inc/satisfy-customize.php:388
+#: inc/satisfy-customize.php:391
 msgid "Don't show in blog loops"
 msgstr ""
 
-#: inc/satisfy-customize.php:392
+#: inc/satisfy-customize.php:395
 msgid "Show search icon in header menu"
 msgstr ""
 
-#: inc/satisfy-customize.php:398
+#: inc/satisfy-customize.php:401
 msgid "Sticky header menu"
 msgstr ""
 
-#: inc/satisfy-customize.php:404
+#: inc/satisfy-customize.php:407
 msgid "Sticky scroll to top button"
 msgstr ""
 
-#: inc/satisfy-customize.php:410
+#: inc/satisfy-customize.php:413
 msgid "Show \"Allowed html tags\" text at posts and pages comment form"
 msgstr ""
 
-#: inc/satisfy-customize.php:417
+#: inc/satisfy-customize.php:420
 msgid "Show posts full content in blog loops"
 msgstr ""
 
-#: inc/satisfy-customize.php:423
+#: inc/satisfy-customize.php:426
 msgid "Show \"posted on\" info"
 msgstr ""
 
-#: inc/satisfy-customize.php:429
+#: inc/satisfy-customize.php:432
 msgid "Show \"posted on\" info for pages"
 msgstr ""
 
-#: inc/satisfy-customize.php:435
+#: inc/satisfy-customize.php:438
+msgid "Sidebar border"
+msgstr ""
+
+#: inc/satisfy-customize.php:444
 msgid "Show fontawesome icons for post info, categories, tags and read more buttons"
 msgstr ""
 
-#: inc/satisfy-customize.php:441
+#: inc/satisfy-customize.php:450
 msgid "Show posts updated date"
 msgstr ""
 
-#: inc/satisfy-customize.php:447
+#: inc/satisfy-customize.php:456
 msgid "Show read more buttons"
 msgstr ""
 
-#: inc/satisfy-customize.php:453
+#: inc/satisfy-customize.php:462
 msgid "Show profile picture on author pages"
 msgstr ""
 
-#: inc/satisfy-customize.php:454
+#: inc/satisfy-customize.php:463
 msgid "From \"Profile picture\" on your Profile page"
 msgstr ""
 
-#: inc/satisfy-customize.php:460
+#: inc/satisfy-customize.php:469
 msgid "Show previous and next post links in posts and pages"
 msgstr ""
 
-#: inc/satisfy-customize.php:468
+#: inc/satisfy-customize.php:477
 msgid "Footer background image"
 msgstr ""
 
-#: inc/satisfy-customize.php:484
+#: inc/satisfy-customize.php:493
 msgid "Text shadow in footer"
 msgstr ""
 
-#: inc/satisfy-customize.php:490
+#: inc/satisfy-customize.php:499
 msgid "Footer text"
 msgstr ""
 
-#: inc/satisfy-customize.php:491
+#: inc/satisfy-customize.php:500
 msgid "Text to be displayed in the footer. If you have active footer widgets they will be shown instead"
 msgstr ""
 
-#: inc/satisfy-customize.php:792
+#: inc/satisfy-customize.php:813
 msgid "Open Sans"
 msgstr ""
 
-#: inc/satisfy-customize.php:793
+#: inc/satisfy-customize.php:814
 msgid "Roboto Slab"
 msgstr ""
 
-#: inc/satisfy-customize.php:794
+#: inc/satisfy-customize.php:815
 msgid "Georgia"
 msgstr ""
 
-#: inc/satisfy-customize.php:795
+#: inc/satisfy-customize.php:816
 msgid "Palatino Linotype"
 msgstr ""
 
-#: inc/satisfy-customize.php:796
+#: inc/satisfy-customize.php:817
 msgid "Times New Roman"
 msgstr ""
 
-#: inc/satisfy-customize.php:797
+#: inc/satisfy-customize.php:818
 msgid "Arial"
 msgstr ""
 
-#: inc/satisfy-customize.php:798
+#: inc/satisfy-customize.php:819
 msgid "Arial Black"
 msgstr ""
 
-#: inc/satisfy-customize.php:799
+#: inc/satisfy-customize.php:820
 msgid "Comic Sans"
 msgstr ""
 
-#: inc/satisfy-customize.php:800
+#: inc/satisfy-customize.php:821
 msgid "Impact"
 msgstr ""
 
-#: inc/satisfy-customize.php:801
+#: inc/satisfy-customize.php:822
 msgid "Tahoma"
 msgstr ""
 
-#: inc/satisfy-customize.php:802
+#: inc/satisfy-customize.php:823
 msgid "Helvetica Neue"
 msgstr ""
 
-#: inc/satisfy-customize.php:803
+#: inc/satisfy-customize.php:824
 msgid "Lucida Sans Unicode"
 msgstr ""
 
-#: inc/satisfy-customize.php:804
+#: inc/satisfy-customize.php:825
 msgid "Trebuchet"
 msgstr ""
 
-#: inc/satisfy-customize.php:805
+#: inc/satisfy-customize.php:826
 msgid "Verdana"
 msgstr ""
 
-#: inc/satisfy-customize.php:806
+#: inc/satisfy-customize.php:827
 msgid "Century Gothic"
 msgstr ""
 
-#: inc/satisfy-customize.php:807
+#: inc/satisfy-customize.php:828
 msgid "Courier New"
 msgstr ""
 
-#: inc/satisfy-customize.php:808
+#: inc/satisfy-customize.php:829
 msgid "Lucida Console"
 msgstr ""
 
-#: inc/satisfy-customize.php:809
+#: inc/satisfy-customize.php:830
 msgid "Cursive"
 msgstr ""
 
-#: inc/satisfy-customize.php:810
+#: inc/satisfy-customize.php:831
 msgid "Sans Serif"
 msgstr ""
 
-#: inc/satisfy-customize.php:811
+#: inc/satisfy-customize.php:832
 msgid "Serif"
 msgstr ""
 
