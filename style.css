@@ -377,6 +377,9 @@ body.home .hide-h1-slogan .custom-content {
     z-index: 5;
     padding: 0 15px;
 }
+.admin-bar #site-header{
+    top: 32px;
+}
 @media screen and (max-width: 1200px) {
     #site-header {
         padding: 0;
@@ -385,6 +388,16 @@ body.home .hide-h1-slogan .custom-content {
 @media screen and (max-width: 991px) {
     #site-header.-active {
         position: fixed;
+    }
+}
+@media screen and (max-width: 782px) {
+    .admin-bar #site-header {
+        top: 46px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .admin-bar #site-header {
+        top: 0;
     }
 }
 #site-header #site-logo {
@@ -462,10 +475,23 @@ body.home .hide-h1-slogan .custom-content {
         height: 0;
         font-size: 1em;
     }
+    .admin-bar .site-nav {
+        top: 87px;
+    }
+}
+@media screen and (max-width: 782px) {
+    .admin-bar .site-nav {
+        top: 101px;
+    }
 }
 @media screen and (max-width: 767px) {
     .site-nav {
         padding: 10px 15px 55px 15px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .admin-bar .site-nav {
+        top: 55px;
     }
 }
 @media screen and (min-width: 992px) {
