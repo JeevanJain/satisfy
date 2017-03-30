@@ -66,10 +66,10 @@ class Satisfy_admin {
                         <p><?php _e( 'There\'s a premium version of Satisfy out there which includes:', 'satisfy' ); ?></p>
 
                         <ul class="default-ul">
-                            <li><?php _e( 'Home page header slider', 'satisfy' ); ?></li>
-                            <li><?php _e( 'Home page video header', 'satisfy' ); ?></li>
+                            <li><?php _e( 'Home Page Header Slider', 'satisfy' ); ?></li>
+                            <li><?php _e( 'Home Page Video Header', 'satisfy' ); ?></li>
                             <li><?php _e( 'Customizable headers on Posts and Pages', 'satisfy' ); ?></li>
-                            <li><?php _e( 'Google fonts', 'satisfy' ); ?></li>
+                            <li><?php _e( 'New fonts', 'satisfy' ); ?></li>
                             <li><?php _e( 'And much more!', 'satisfy' ); ?></li>
                         </ul>
 

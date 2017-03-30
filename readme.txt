@@ -63,6 +63,7 @@ Satisfy bundles the following third-party resources:
 
 = Next update =
 * Optional sidebar border
+* Css fixes
 
 = 1.0.6 (Mar 14, 2017) =
 * Css fixes
