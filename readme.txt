@@ -13,7 +13,7 @@ Tags: one-column, two-columns, left-sidebar, right-sidebar, custom-background, c
 
 == Description ==
 
-Satisfy is a rich, responsive and customizable WordPress theme. It's built using bootstrap with a modern design that's both desktop and mobile friendly, and supports all modern browsers and even older ie versions. The themes focus is mainly for blogs but it’s also ideal for static, business and other types of sites and is quite easy to set up. It includes 2 new widgets and 3 page templates and when it comes to customization options Satisfy offers plenty. Color options, fonts, icons, featured images, full width headers and much more!
+Satisfy is a rich, responsive and customizable WordPress theme. It's built using html5 and bootstrap with a modern design that's both desktop and mobile friendly, and supports all modern browsers and even older ie versions. The themes focus is mainly for blogs but it’s also ideal for static, business and other types of sites and is quite easy to set up. It includes 2 new widgets and 3 page templates and when it comes to customization options Satisfy offers plenty. Color options, fonts, icons, featured images, full width headers and much more!
 
 == Installation ==
 
