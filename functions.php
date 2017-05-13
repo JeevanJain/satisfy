@@ -157,7 +157,7 @@ if ( ! function_exists( 'satisfy_get_content_class' ) ) {
         $sidebar = satisfy_temp_option( 'sidebar' );
 
         if ( false !== strpos( $sidebar, 'off' ) ) {
-            return 'col-xs-12' . ('off-small' === $sidebar ? ' col-md-8 center-div' : '');
+            return 'col-xs-12 ' . ('off-small' === $sidebar ? 'col-md-8 center-div' : 'satisfy-no-sidebar');
         }
         return 'col-md-8 col-sm-12';
     }

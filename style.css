@@ -701,6 +701,9 @@ article .article-body .article-image-div {
         padding-right: 20px;
         margin-top: 5px;
     }
+    .satisfy-no-sidebar article .article-body .article-image-div.article-half-size {
+        max-height: 445px;
+    }
 }
 article .article-body .article-image-div img {
     width: 100%;
