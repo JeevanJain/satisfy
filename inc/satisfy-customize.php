@@ -336,7 +336,7 @@ class Satisfy_customize {
         ) ) );
         $c->add_control( new WP_Customize_Control( $c, 'satisfy_banner_size', array(
             'label'       => __( 'Header height on home page', 'satisfy' ),
-            'description' => __( 'Header is always 100% width, here you change its height. Vh units are relative to screens so 100vh means 100% screen height.', 'satisfy' ),
+            'description' => __( 'Header is always 100% width, here you change its height. Vh units are relative to screens so 100vh means 100% screen height on all devices.', 'satisfy' ),
             'section'     => 'header_image',
             'settings'    => 'satisfy_banner[size]',
             'type'        => 'select',
