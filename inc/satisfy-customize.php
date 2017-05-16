@@ -362,14 +362,14 @@ class Satisfy_customize {
             )
         ) ) );
         $c->add_control( new WP_Customize_Control( $c, 'satisfy_banner_scale', array(
-            'label'       => __( 'Headers scale style', 'satisfy' ),
+            'label'       => __( 'Header scale style', 'satisfy' ),
             'section'     => 'header_image',
             'settings'    => 'satisfy[banner_scale]',
             'type'        => 'select',
             'choices'     => self::get_scale_styles()
         ) ) );
         $c->add_control( new WP_Customize_Control( $c, 'satisfy_banner_scale_mobile', array(
-            'label'       => __( 'Headers scale style on mobile screens', 'satisfy' ),
+            'label'       => __( 'Header scale style on mobile screens', 'satisfy' ),
             'section'     => 'header_image',
             'settings'    => 'satisfy[banner_scale_mobile]',
             'type'        => 'select',
