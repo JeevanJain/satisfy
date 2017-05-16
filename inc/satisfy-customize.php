@@ -369,7 +369,7 @@ class Satisfy_customize {
             'choices'     => self::get_scale_styles()
         ) ) );
         $c->add_control( new WP_Customize_Control( $c, 'satisfy_banner_scale_mobile', array(
-            'label'       => __( 'Headers scale style on mobile devices', 'satisfy' ),
+            'label'       => __( 'Headers scale style on mobile screens', 'satisfy' ),
             'section'     => 'header_image',
             'settings'    => 'satisfy[banner_scale_mobile]',
             'type'        => 'select',
