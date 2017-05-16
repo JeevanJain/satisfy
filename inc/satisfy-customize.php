@@ -80,12 +80,17 @@ class Satisfy_customize {
             'default'           => 60,
             'sanitize_callback' => array( __CLASS__, 'float_val' )
         ) );
+        $c->add_setting( 'satisfy[banner_scale]', array(
+            'default'           => 'cover',
+            'sanitize_callback' => 'sanitize_text_field'
+        ) );
+        $c->add_setting( 'satisfy[banner_scale_mobile]', array(
+            'default'           => 'cover',
+            'sanitize_callback' => 'sanitize_text_field'
+        ) );
         $c->add_setting( 'satisfy[banner_overlay]', array(
             'default'           => 0.3,
             'sanitize_callback' => array( __CLASS__, 'float_val' )
-        ) );
-        $c->add_setting( 'satisfy[contain]', array(
-            'sanitize_callback' => array( __CLASS__, 'bool_val' )
         ) );
         $c->add_setting( 'satisfy[footer_overlay]', array(
             'default'           => 0,
@@ -331,7 +336,7 @@ class Satisfy_customize {
         ) ) );
         $c->add_control( new WP_Customize_Control( $c, 'satisfy_banner_size', array(
             'label'       => __( 'Header height on home page', 'satisfy' ),
-            'description' => __( 'Header is always 100% width, here you change its height', 'satisfy' ),
+            'description' => __( 'Header is always 100% width, here you change its height. Vh units are relative to screens so 100vh means 100% screen height.', 'satisfy' ),
             'section'     => 'header_image',
             'settings'    => 'satisfy_banner[size]',
             'type'        => 'select',
@@ -356,11 +361,19 @@ class Satisfy_customize {
                 'step' => 0.1
             )
         ) ) );
-        $c->add_control( new WP_Customize_Control( $c, 'satisfy_contain', array(
-            'label'    => __( 'Don\'t zoom in header image to fill the header on mobile screens', 'satisfy' ),
-            'section'  => 'header_image',
-            'settings' => 'satisfy[contain]',
-            'type'     => 'checkbox'
+        $c->add_control( new WP_Customize_Control( $c, 'satisfy_banner_scale', array(
+            'label'       => __( 'Headers scale style', 'satisfy' ),
+            'section'     => 'header_image',
+            'settings'    => 'satisfy[banner_scale]',
+            'type'        => 'select',
+            'choices'     => self::get_scale_styles()
+        ) ) );
+        $c->add_control( new WP_Customize_Control( $c, 'satisfy_banner_scale_mobile', array(
+            'label'       => __( 'Headers scale style on mobile devices', 'satisfy' ),
+            'section'     => 'header_image',
+            'settings'    => 'satisfy[banner_scale_mobile]',
+            'type'        => 'select',
+            'choices'     => self::get_scale_styles()
         ) ) );
 
         // Layout
@@ -534,8 +547,9 @@ class Satisfy_customize {
                 'footer_overlay'       => 0,
                 'footer_background'    => '#ba4444',
                 'footer_border'        => '#e8e8e8',
+                'banner_scale'         => 'cover',
+                'banner_scale_mobile'  => 'cover',
                 'footer_shadow'        => false,
-                'contain'              => false,
                 'show_nextlinks'       => true,
                 'sidebar_border'       => false,
                 'fontawesome'          => true,
@@ -670,7 +684,15 @@ class Satisfy_customize {
             color: {$escaped_styles['menu_color']};
             background: {$escaped_styles['menu_background']};
         }
+        @media screen and (min-width:992px){
+            #site-hero .cover-img{
+                background-size:" . self::get_scale_styles( $escaped_styles['banner_scale'] ) . "
+            }
+        }
         @media screen and (max-width:991px){
+            #site-hero .cover-img{
+                background-size:" . self::get_scale_styles( $escaped_styles['banner_scale_mobile'] ) . "
+            }
             .site-nav{
                 background: {$escaped_styles['menu_background']};
             }
@@ -680,9 +702,8 @@ class Satisfy_customize {
                 background: transparent;
                 border-bottom-color: {$escaped_styles['menu_color']};
                 box-shadow: none;
-            }" .
-            ($escaped_styles['contain'] ? '#site-hero .cover-img{ background-size: contain; }' : '') .
-        "}
+            }
+        }
         .site-nav a:hover,
         .site-nav a:focus,
         body .read-more:hover,
@@ -774,8 +795,6 @@ class Satisfy_customize {
                 }
             }';
         }
-
-
 
         if ( $escaped_styles['sidebar_border'] ) {
             $css .= "@media screen and (min-width: 992px){
@@ -885,5 +904,28 @@ class Satisfy_customize {
             $from += $incr;
         }
         return $arr;
+    }
+
+    public static function get_scale_styles ( $print_style = false ) {
+        $styles = array(
+            'cover'     => __( 'Cover', 'satisfy' ),
+            'contain'   => __( 'Contain', 'satisfy' ),
+            '100% 100%' => __( 'Fixed', 'satisfy' ),
+            'left'      => __( 'Left', 'satisfy' ),
+            'right'     => __( 'Right', 'satisfy' ),
+            'top'       => __( 'Top', 'satisfy' ),
+            'bottom'    => __( 'Bottom', 'satisfy' )
+        );
+
+        if ( ! $print_style ) {
+            return $styles;
+
+        } elseif ( in_array( $print_style, array( 'left', 'right', 'top', 'bottom' ) ) ) {
+            return 'cover;background-position:center ' . $print_style;
+
+        } elseif ( array_key_exists( $print_style, $styles ) ) {
+            return $print_style;
+        }
+        return 'cover';
     }
 }
