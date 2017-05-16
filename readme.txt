@@ -6,7 +6,7 @@ Contributors: Webbjocke
 Author URI: https://www.webbjocke.com/
 Requires at least: WordPress 4.1
 Tested up to: 4.8
-Version: 1.0.7
+Version: 1.0.8
 License: GNU General Public License v3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Tags: one-column, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-logo, custom-menu, featured-image-header, featured-images, footer-widgets, microformats, theme-options, threaded-comments, translation-ready, blog
@@ -61,7 +61,7 @@ Satisfy bundles the following third-party resources:
 
 == Changelog ==
 
-= Next update =
+= 1.0.8 (May 17, 2017) =
 * Featured images css fix
 * New header image options
 * Tested with 4.8

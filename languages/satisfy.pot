@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Satisfy\n"
-"POT-Creation-Date: 2017-05-17 01:11+0200\n"
+"POT-Creation-Date: 2017-05-17 01:34+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Webbjocke <mail@webbjocke.com>\n"
 "Language-Team: Webbjocke <mail@webbjocke.com>\n"
@@ -361,7 +361,7 @@ msgid "Header scale style"
 msgstr ""
 
 #: inc/satisfy-customize.php:372
-msgid "Header scale style on mobile screens"
+msgid "Header scale style on mobile screen size"
 msgstr ""
 
 #: inc/satisfy-customize.php:386
