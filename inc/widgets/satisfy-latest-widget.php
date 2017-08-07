@@ -19,8 +19,8 @@ class Satisfy_latest_posts_widget extends WP_Widget {
 
     // Makes sure all options are set in array
     public function prep_instance ( $ins ) {
-        $ins['title'] = satisfy_not_empty( 'title', $ins ) ? $ins['title'] : '';
-        $ins['num']   = satisfy_not_empty( 'num', $ins ) ? $ins['num'] : 5;
+        $ins['title'] = empty( $ins['title'] ) ? '' : $ins['title'];
+        $ins['num']   = empty( $ins['num'] ) ? 5 : $ins['num'];
 
         return $ins;
     }

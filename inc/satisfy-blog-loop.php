@@ -8,7 +8,7 @@ function satisfy_blog_loop ( $title = null, $custom_content = null ) {
     $sidebar = satisfy_temp_option( 'sidebar' );
     $show_full = get_theme_mod( 'show_full_posts' );
     $img = $show_full ? 'full' : satisfy_get_featured_image();
-    $is_post = satisfy_is_post();
+    $is_post = is_singular();
 
     if ( 'left' === $sidebar ) { // sidebar to the left
         get_sidebar();

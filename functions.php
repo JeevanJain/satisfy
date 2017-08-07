@@ -4,7 +4,7 @@
  * Functions
  */
 
-define( 'SATISFY_THEME_VERSION', '1.0.8' );
+define( 'SATISFY_THEME_VERSION', '1.0.9' );
 define( 'SATISFY_THEME_DIR', get_template_directory() . '/' );
 define( 'SATISFY_THEME_URL', get_template_directory_uri() . '/' );
 define( 'SATISFY_THEME_ADMIN', 'satisfy-theme-info' );
@@ -145,7 +145,7 @@ function satisfy_excerpt_more ( $more ) {
 
 // Removes hentry class if already set - filter "post_class"
 function satisfy_post_class ( $classes ) {
-    if ( satisfy_is_post() && satisfy_temp_option( 'has_banner' ) ) {
+    if ( is_singular() && satisfy_temp_option( 'has_banner' ) ) {
         $classes = array_diff( $classes, array( 'hentry' ) );
     }
     return $classes;
@@ -211,7 +211,7 @@ if ( ! function_exists( 'satisfy_prepare_banner' ) ) {
             $banner['slogan'] = get_theme_mod( 'satisfy_new_slogan' );
             $banner['h1'] = get_theme_mod( 'satisfy_tagline' );
 
-        } elseif ( ( satisfy_is_post() || is_home() ) && 'full' === get_theme_mod( 'posts_featured_images' ) ) {
+        } elseif ( ( is_singular() || is_home() ) && 'full' === get_theme_mod( 'posts_featured_images' ) ) {
             $id = is_home() ? get_option( 'page_for_posts' ) : get_the_ID();
 
             if ( has_post_thumbnail( $id ) ) {
@@ -280,7 +280,7 @@ if ( ! function_exists( 'satisfy_print_banner' ) ) {
 // Get featured image size for current page
 if ( ! function_exists( 'satisfy_get_featured_image' ) ) {
     function satisfy_get_featured_image () {
-        if ( satisfy_is_post() ) {
+        if ( is_singular() ) {
             if ( ! get_theme_mod( 'posts_featured_images' ) ) {
                 return 'full';
             }
@@ -320,7 +320,7 @@ if ( ! function_exists( 'satisfy_footer_top_info' ) ) {
             <div class="text-center"><p><?php echo satisfy_wp_kses( $text ); ?></p></div>
         <?php } else { ?>
             <div class="text-center">
-                <p><?php bloginfo( 'name' ); ?> &copy; <?php echo date_i18n( __( 'Y', 'satisfy' ) ); ?></p>
+                <p class="footer-info"><?php bloginfo( 'name' ); ?> &copy; <?php echo date_i18n( __( 'Y', 'satisfy' ) ); ?></p>
                 <nav class="footer-nav">
                     <?php wp_nav_menu( array(
                         'theme_location' => 'footer'
@@ -360,7 +360,7 @@ function satisfy_welcome_message () {
 // Footer bottom credit text
 function satisfy_footer_bottom_info () {
     if ( apply_filters( 'satisfy_footer_info', true ) ) {
-        printf( '<p>%s Satisfy</p>', __( 'Theme', 'satisfy' ) );
+        printf( '<p>%s</p>', __( 'Theme Satisfy', 'satisfy' ) );
     }
 }
 

@@ -20,7 +20,7 @@ class Satisfy_image_widget extends WP_Widget {
     // Makes sure all options are set in array
     public function prep_instance ( $ins ) {
         foreach ( array( 'title', 'url', 'alt', 'link' ) as $option ) {
-            $ins[ $option ] = satisfy_not_empty( $option, $ins ) ? $ins[ $option ] : '';
+            $ins[ $option ] = empty( $ins[ $option ] ) ? '' : $ins[ $option ];
         }
         return $ins;
     }
@@ -77,9 +77,9 @@ class Satisfy_image_widget extends WP_Widget {
         $ins = $this->prep_instance( $ins );
 
         $ins['title'] = sanitize_text_field( $ins['title'] );
-        $ins['url']   = esc_url_raw( $ins['url'] );
+        $ins['url']   = esc_url_raw( trim( $ins['url'] ) );
         $ins['alt']   = sanitize_text_field( $ins['alt'] );
-        $ins['link']  = esc_url_raw( $ins['link'] );
+        $ins['link']  = esc_url_raw( trim( $ins['link'] ) );
 
         return $ins;
     }

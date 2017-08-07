@@ -20,7 +20,7 @@ class Satisfy_admin {
         <div class="wrap">
 
             <div id="<?php echo SATISFY_THEME_ADMIN . '-form' ?>">
-                <h1><?php _e( 'Satisfy Info', 'satisfy' ); ?></h1>
+                <h1><?php _e( 'Satisfy theme info', 'satisfy' ); ?></h1>
 
                 <div id="tabs">
 
@@ -32,7 +32,10 @@ class Satisfy_admin {
 
                     <div id="tabs-1" class="tab-item">
                         <h2><?php _e( 'General', 'satisfy' ); ?></h2>
-                        <?php printf( __( 'Your theme settings are at Appearance &gt; <a href="%s">Customize</a>.', 'satisfy' ), esc_url( admin_url( 'customize.php' ) ) ); ?>
+                        <?php printf(
+                            __( 'Your theme settings are at Appearance %s', 'satisfy' ),
+                            sprintf( '&gt; <a href="%s">%s</a>', esc_url( admin_url( 'customize.php' ) ), __( 'Customize', 'satisfy' ) )
+                        ); ?>
 
                         <h2 class="top-30"><?php _e( 'Widgets', 'satisfy' ); ?></h2>
                         <p><?php _e( 'Satisfy adds two widgets that you can use', 'satisfy' ); ?></p>
@@ -42,10 +45,14 @@ class Satisfy_admin {
                             <li><?php _e( 'Satisfy Image - Displays an image of your choice', 'satisfy' ); ?></li>
                         </ul>
 
+                        <h2 class="top-30"><?php _e( 'Header images', 'satisfy' ); ?></h2>
+                        <p><?php printf(
+                            __( 'With Satisfy your posts and pages can have their "featured images" (selected where you edit your posts and pages) displayed as big header images. To enable it set the option "Featured images in posts and pages" in your %s to "As header images".', 'satisfy' ),
+                            sprintf( '<a href="%s">%s</a>', esc_url( admin_url( 'customize.php?autofocus[section]=satisfy_layout' ) ), __( 'Layout settings', 'satisfy' ) )
+                        ); ?></p>
+
                         <h2 class="top-30"><?php _e( 'About the footer', 'satisfy' ); ?></h2>
-                        <p>
-                            <?php _e( 'The theme adds three sections in the footer for widgets (Footer 1, Footer 2, and Footer 3). If you only add widgets in one section they will have 100% width in the footer, two sections will have 50% each and three sections 33%. Tip: If you only want to have a small widget in the middle add it to the Footer 2 (middle) widget and add an empty "Text widget" in Footer 1 (left) and one in Footer 3 (right).', 'satisfy' ); ?>
-                        </p>
+                        <p><?php _e( 'The theme adds three sections in the footer for widgets (Footer 1, Footer 2, and Footer 3). If you only add widgets in one section they will have 100% width in the footer, two sections will have 50% each and three sections 33%. Tip: If you only want to have a small widget in the middle add it to the Footer 2 (middle) widget and add an empty "Text widget" in Footer 1 (left) and one in Footer 3 (right).', 'satisfy' ); ?></p>
 
                         <h2 class="top-30"><?php _e( 'Like the theme?', 'satisfy' ); ?></h2>
                         <p><?php _e( 'Show your support by rating the theme at wordpress.org!', 'satisfy' ); ?></p>
@@ -53,17 +60,13 @@ class Satisfy_admin {
 
                     <div id="tabs-2" class="tab-item">
                         <h2><?php _e( 'Satisfy is translation ready!', 'satisfy' ); ?></h2>
-                        <p>
-                            <?php _e( 'On your site the theme displays some sentences like "posted on", "updated" and "Oops! That page can\'t be found" etc. These sentences can be translated into your own language if you want. (If they already aren\'t)', 'satisfy' ); ?>
-                        </p>
-                        <p>
-                            <?php _e( 'Either you can help contributing to translating the theme at satifys theme page at wordpress.org so others also can use your translations. Or you can use a plugin like Loco Translate or some other to translate the sentences you want. Programs like Poedit also does the trick.', 'satisfy' ); ?>
-                        </p>
+                        <p><?php _e( 'On your site the theme displays some sentences like "posted on", "updated" and "Oops! That page can\'t be found" etc. These sentences can be translated into your own language if you want. (If they already aren\'t)', 'satisfy' ); ?></p>
+                        <p><?php _e( 'Either you can help contributing to translating the theme at satifys theme page at wordpress.org so others also can use your translations. Or you can use a plugin like Loco Translate or some other to translate the sentences you want. Programs like Poedit also does the trick.', 'satisfy' ); ?></p>
                     </div>
 
                     <div id="tabs-3" class="tab-item">
                         <h2><?php _e( 'Satisfy Premium', 'satisfy' ); ?></h2>
-                        <p><?php _e( 'There\'s a premium version of Satisfy out there which includes:', 'satisfy' ); ?></p>
+                        <p><?php _e( 'There\'s a premium version of Satisfy available which includes:', 'satisfy' ); ?></p>
 
                         <ul class="default-ul">
                             <li><?php _e( 'Home Page Header Slider', 'satisfy' ); ?></li>
@@ -73,7 +76,7 @@ class Satisfy_admin {
                             <li><?php _e( 'And much more!', 'satisfy' ); ?></li>
                         </ul>
 
-                        <p><?php printf( __( 'Available at: <a href="%s" target="_blank">webbjocke.com/downloads/satisfy-premium</a>', 'satisfy' ), esc_url( 'https://www.webbjocke.com/downloads/satisfy-premium/' ) ); ?></p>
+                        <p><?php _e( 'Available at:', 'satisfy' ); ?> <a href="<?php echo esc_url( 'https://www.webbjocke.com/downloads/satisfy-premium/' ); ?>" target="_blank"><?php _e( 'Satisfy Premium', 'satisfy' ); ?></a></p>
                     </div>
 
                 </div>

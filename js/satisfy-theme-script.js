@@ -12,6 +12,7 @@ jQuery(function ( $ ) {
         pad = 150,
 
         nav = $( '.site-nav' ),
+        nav_childs = nav.find( '.sub-menu, .children' ).not( '.sub-menu .sub-menu, .sub-menu .children, .children .sub-menu, .children .children' ),
         logo = $( '#site-logo' ),
         res_div = $( '#site-hero .vertical-table' ),
         scroll_btn = $( '.satisfy-to-top' ),
@@ -43,6 +44,9 @@ jQuery(function ( $ ) {
         resized = setTimeout(function () {
             res_div.css( 'padding-top', (! is_mobile() && nav.height() > offset ? pad : pad - 55) + 'px' );
             nav.css( 'max-width', 'calc(100% - ' + (logo.width() + 10) + 'px)' );
+            if ( nav_childs.length ) {
+                nav_childs.css( 'max-height', 'calc(100vh - ' + (parseInt( header.css( 'top' ) ) + nav.height()) + 'px)' );
+            }
         }, offset );
     };
 

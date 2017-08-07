@@ -336,11 +336,11 @@ class Satisfy_customize {
         ) ) );
         $c->add_control( new WP_Customize_Control( $c, 'satisfy_banner_size', array(
             'label'       => __( 'Header height on home page', 'satisfy' ),
-            'description' => __( 'Header is always 100% width, here you change its height. Vh units are relative to screens so 100vh means 100% screen height on all devices.', 'satisfy' ),
+            'description' => __( 'Header is always 100% width, here you change its height.', 'satisfy' ),
             'section'     => 'header_image',
             'settings'    => 'satisfy_banner[size]',
             'type'        => 'select',
-            'choices'     => self::get_units( 25, 100, 1, 'vh' )
+            'choices'     => self::get_units( 25, 100, 1, 'vh', '%' )
         ) ) );
         $c->add_control( new WP_Customize_Control( $c, 'satisfy_banner_page_size', array(
             'label'       => __( 'Header height on posts and pages', 'satisfy' ),
@@ -348,7 +348,7 @@ class Satisfy_customize {
             'section'     => 'header_image',
             'settings'    => 'satisfy_banner[page_size]',
             'type'        => 'select',
-            'choices'     => self::get_units( 25, 100, 1, 'vh' )
+            'choices'     => self::get_units( 25, 100, 1, 'vh', '%' )
         ) ) );
         $c->add_control( new WP_Customize_Control( $c, 'satisfy_banner_overlay', array(
             'label'       => __( 'Black background overlay', 'satisfy' ),
@@ -362,14 +362,15 @@ class Satisfy_customize {
             )
         ) ) );
         $c->add_control( new WP_Customize_Control( $c, 'satisfy_banner_scale', array(
-            'label'       => __( 'Header scale style', 'satisfy' ),
+            'label'       => __( 'Header cover style (advanced)', 'satisfy' ),
             'section'     => 'header_image',
             'settings'    => 'satisfy[banner_scale]',
             'type'        => 'select',
             'choices'     => self::get_scale_styles()
         ) ) );
         $c->add_control( new WP_Customize_Control( $c, 'satisfy_banner_scale_mobile', array(
-            'label'       => __( 'Header scale style on mobile screen size', 'satisfy' ),
+            'label'       => __( 'Header cover style on mobile screen size', 'satisfy' ),
+            'description' => __( '(smaller than 992px width)', 'satisfy' ),
             'section'     => 'header_image',
             'settings'    => 'satisfy[banner_scale_mobile]',
             'type'        => 'select',
@@ -684,12 +685,12 @@ class Satisfy_customize {
             color: {$escaped_styles['menu_color']};
             background: {$escaped_styles['menu_background']};
         }
-        @media screen and (min-width:992px){
+        @media (min-width:992px){
             #site-hero .cover-img{
                 background-size:" . self::get_scale_styles( $escaped_styles['banner_scale'] ) . "
             }
         }
-        @media screen and (max-width:991px){
+        @media (max-width:991px){
             #site-hero .cover-img{
                 background-size:" . self::get_scale_styles( $escaped_styles['banner_scale_mobile'] ) . "
             }
@@ -783,7 +784,7 @@ class Satisfy_customize {
             #site-header{
                 position: absolute;
             }
-            @media screen and (max-width: 767px){
+            @media (max-width: 767px){
                 #site-header .content-wrapper{
                     margin: 0;
                 }
@@ -797,7 +798,7 @@ class Satisfy_customize {
         }
 
         if ( $escaped_styles['sidebar_border'] ) {
-            $css .= "@media screen and (min-width: 992px){
+            $css .= "@media (min-width: 992px){
                 #primary-sidebar .sfy-pad-left{
                     border-left: 1px solid {$escaped_styles['border_color']};
                 }
@@ -891,15 +892,19 @@ class Satisfy_customize {
         return (bool) $val;
     }
 
-    // Font units for select menus
-    public static function get_units ( $from, $to, $incr, $unit ) {
+    // Units for select menus
+    public static function get_units ( $from, $to, $incr, $unit, $display = null ) {
         $arr = array();
+
+        if ( ! $display ) {
+            $display = $unit;
+        }
 
         while ( $from <= $to ) {
             if ( '%' === $unit ) {
-                $arr[ $from . '' ] = ($from * 100) . $unit;
+                $arr[ $from . '' ] = ($from * 100) . $display;
             } else {
-                $arr[ $from . '' ] = $from . $unit;
+                $arr[ $from . '' ] = $from . $display;
             }
             $from += $incr;
         }

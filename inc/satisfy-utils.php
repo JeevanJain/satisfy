@@ -9,21 +9,6 @@ function satisfy_is_home () {
     return is_home() || is_front_page();
 }
 
-// If is a post or page, also returns which
-function satisfy_is_post () {
-    if ( is_single() ) {
-        return 'single';
-    } elseif ( is_page() ) {
-        return 'page';
-    }
-    return false;
-}
-
-// If key in array is set and not empty
-function satisfy_not_empty ( $key, &$arr ) {
-    return isset( $arr[ $key ] ) && $arr[ $key ];
-}
-
 // Paged info
 function satisfy_get_paged ( $title ) {
     $title = satisfy_trim( $title );
@@ -67,4 +52,14 @@ function satisfy_temp_option ( $key, $val = null ) {
         }
         return $options[ $key ] ? $options[ $key ] : '';
     }
+}
+
+// If is a post or page (deprecated)
+function satisfy_is_post () {
+    return is_singular();
+}
+
+// If key in array is set and not empty (deprecated)
+function satisfy_not_empty ( $key, &$arr ) {
+    return ! empty( $arr[ $key ] );
 }
