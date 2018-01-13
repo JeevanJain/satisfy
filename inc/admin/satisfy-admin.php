@@ -76,7 +76,7 @@ class Satisfy_admin {
                             <li><?php _e( 'And much more!', 'satisfy' ); ?></li>
                         </ul>
 
-                        <p><?php _e( 'Available at:', 'satisfy' ); ?> <a href="<?php echo esc_url( 'https://www.webbjocke.com/downloads/satisfy-premium/' ); ?>" target="_blank"><?php _e( 'Satisfy Premium', 'satisfy' ); ?></a></p>
+                        <p><a class="button-primary" href="<?php echo esc_url( 'https://www.webbjocke.com/downloads/satisfy-premium/' ); ?>" target="_blank" rel="noopener"><?php _e( 'Get Satisfy Premium!', 'satisfy' ); ?></a></p>
                     </div>
 
                 </div>

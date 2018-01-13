@@ -5,8 +5,8 @@ Theme URI: https://www.webbjocke.com/satisfy/
 Contributors: Webbjocke
 Author URI: https://www.webbjocke.com/
 Requires at least: WordPress 4.1
-Tested up to: 4.8.1
-Version: 1.0.9
+Tested up to: 4.9.1
+Version: 1.1.0
 License: GNU General Public License v3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Tags: one-column, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-logo, custom-menu, featured-image-header, featured-images, footer-widgets, microformats, theme-options, threaded-comments, translation-ready, blog
@@ -30,7 +30,7 @@ Satisfy is a rich, responsive and customizable WordPress theme. It's built using
 == Copyright ==
 
 Satisfy - WordPress theme
-Copyright (C) 2017 Webbjocke
+Copyright (C) 2018 Webbjocke
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -60,6 +60,9 @@ Satisfy bundles the following third-party resources:
 * Google fonts in theme (Roboto Slab & Open Sans) licensed under Apache License, version 2.0 (https://fonts.google.com/attribution)
 
 == Changelog ==
+
+= 1.1.0 (Jan 13, 2018) =
+* Fixed css bug in safari
 
 = 1.0.9 (Aug 7, 2017) =
 * Css fixes

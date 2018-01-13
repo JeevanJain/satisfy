@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Satisfy\n"
-"POT-Creation-Date: 2017-08-07 20:04+0200\n"
+"POT-Creation-Date: 2018-01-13 19:07+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Webbjocke <mail@webbjocke.com>\n"
 "Language-Team: Webbjocke <mail@webbjocke.com>\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 2.0.3\n"
+"X-Generator: Poedit 2.0.5\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: _e;__;esc_attr_e;_n;_n:1,2\n"
 "X-Poedit-Basepath: ..\n"
@@ -199,7 +199,7 @@ msgstr ""
 msgid "Either you can help contributing to translating the theme at satifys theme page at wordpress.org so others also can use your translations. Or you can use a plugin like Loco Translate or some other to translate the sentences you want. Programs like Poedit also does the trick."
 msgstr ""
 
-#: inc/admin/satisfy-admin.php:68 inc/admin/satisfy-admin.php:79
+#: inc/admin/satisfy-admin.php:68
 msgid "Satisfy Premium"
 msgstr ""
 
@@ -228,7 +228,7 @@ msgid "And much more!"
 msgstr ""
 
 #: inc/admin/satisfy-admin.php:79
-msgid "Available at:"
+msgid "Get Satisfy Premium!"
 msgstr ""
 
 #: inc/satisfy-blog-loop.php:86

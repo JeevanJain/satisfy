@@ -4,7 +4,7 @@
  * Functions
  */
 
-define( 'SATISFY_THEME_VERSION', '1.0.9' );
+define( 'SATISFY_THEME_VERSION', '1.1.0' );
 define( 'SATISFY_THEME_DIR', get_template_directory() . '/' );
 define( 'SATISFY_THEME_URL', get_template_directory_uri() . '/' );
 define( 'SATISFY_THEME_ADMIN', 'satisfy-theme-info' );
